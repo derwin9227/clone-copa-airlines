@@ -1,33 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import {default as chat} from "./img/SVG/chat.svg"
+import {default as copa} from "./img/copa-logo-white.svg"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1>hola</h1>
+      <div style={{backgroundColor:"red"}}>
+      <svg>
+        <use xlinkHref="img/sprite.svg#icon-medkit" style={{height:"40px", width:"20px"}} alt="a"></use>
+      </svg>
+      <img src={copa} alt="ho" style={{height:"5rem", width:"15rem", filter:"brightness(0) saturate(100%) invert(11%) sepia(89%) saturate(597%) hue-rotate(26deg) brightness(102%) contrast(104%)"}}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
