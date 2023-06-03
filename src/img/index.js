@@ -1,0 +1,1 @@
+export {default as copaWhite} from "./copa-logo-white.svg";
